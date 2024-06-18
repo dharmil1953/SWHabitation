@@ -1,0 +1,8 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M150 75L87.5 37.5L150 0L212.5 37.5L150 75Z" fill="#E84A5F"/>
+<path d="M275 150V75L212.5 37.5V112.5L275 150Z" fill="#E84A5F"/>
+<path d="M212.5 262.5L275 225V150L212.5 187.5V262.5Z" fill="#E84A5F"/>
+<path d="M87.5 262.5L150 300L212.5 262.5L150 225L87.5 262.5Z" fill="#E84A5F"/>
+<path d="M25 150L87.5 187.5V262.5L25 225V150Z" fill="#E84A5F"/>
+<path d="M25 150L87.5 112.5V37.5L25 75V150Z" fill="#E84A5F"/>
+</svg>

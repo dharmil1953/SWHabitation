@@ -1,0 +1,865 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-outfit text-base bg-theme-ivory;
+  font-display: swap;
+}
+
+input::placeholder {
+  font-weight: 300;
+}
+
+@layer components {
+  .container {
+    @apply s(1440):px-6 max-w-[1334px] w-full mx-auto;
+  }
+}
+
+.bgYellow:before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #fcfc62;
+  position: absolute;
+  display: block;
+  transition: width 0.5s linear;
+}
+
+.bgYellow.active:before {
+  content: "";
+  width: 100%;
+}
+
+.shutter:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: black;
+  transition: transform 0.7s ease-in-out;
+}
+
+.shutter.active:before {
+  transform: translateY(140px);
+}
+
+#nprogress .bar {
+  background-color: #e84a5f !important;
+  height: 0.2em !important;
+}
+
+/* .toggleOpen:before {
+  content: "";
+  width: 0%;
+  height: 100vh;
+  background-color: #fcfc62;
+  display: block;
+  position: fixed;
+}
+
+.toggleOpen.active:before {
+  content: "";
+  width: 100%;
+}
+
+.toggleOpen.active.rightSpacing:before {
+  content: "";
+  width: 100%;
+}
+
+@media only screen and (min-width: 1101px) {
+  .toggleOpen.active.rightSpacing:before {
+    content: "";
+    width: 95%;
+  }
+} */
+
+.toggleOpen .innerToggle {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.toggleOpen.active .innerToggle {
+  opacity: 1;
+}
+
+.toggleOpen.active:not(.rightSpacing) .innerToggle {
+  z-index: 4;
+}
+
+.nav-item-animation {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.toggleOpen.active #customDropdown {
+  z-index: -1 !important;
+}
+
+@media only screen and (min-width: 1440px) {
+  .bannerGrid {
+    padding-left: calc((100% - 1334px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .bannerGrid {
+    padding-left: calc((100% - 90%) / 2);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+body.toggleOpen.active .resourceSection {
+  position: static !important;
+}
+
+.popupOpenImage {
+  overflow-y: hidden;
+}
+
+.toggleOpen.active footer {
+  position: relative;
+  z-index: -1;
+}
+
+@-webkit-keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(51, 51, 51);
+  }
+}
+
+@keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(51, 51, 51);
+  }
+}
+
+.svg-elem-1 {
+  -webkit-animation: animate-svg-fill-1 0.7s ease-out 0.8s both;
+  animation: animate-svg-fill-1 0.7s ease-out 0.8s both;
+}
+
+@-webkit-keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+.svg-elem-2 {
+  -webkit-animation: animate-svg-fill-2 0.7s ease-out 1.5s both;
+  animation: animate-svg-fill-2 0.7s ease-out 1.5s both;
+}
+
+@-webkit-keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(232, 74, 95);
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(232, 74, 95);
+  }
+}
+
+.svg-elem-3 {
+  -webkit-animation: animate-svg-fill-3 0.7s ease-out 2.2s both;
+  animation: animate-svg-fill-3 0.7s ease-out 2.2s both;
+}
+
+@-webkit-keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(245, 189, 51);
+  }
+}
+
+@keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(245, 189, 51);
+  }
+}
+
+.svg-elem-4 {
+  -webkit-animation: animate-svg-fill-4 0.7s ease-out 2.8999999999999995s both;
+  animation: animate-svg-fill-4 0.7s ease-out 2.8999999999999995s both;
+}
+
+@-webkit-keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(229, 87, 51);
+  }
+}
+
+@keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(229, 87, 51);
+  }
+}
+
+.svg-elem-5 {
+  -webkit-animation: animate-svg-fill-5 0.7s ease-out 3.5999999999999996s both;
+  animation: animate-svg-fill-5 0.7s ease-out 3.5999999999999996s both;
+}
+
+@-webkit-keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(229, 87, 51);
+  }
+}
+
+@keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(229, 87, 51);
+  }
+}
+
+.svg-elem-6 {
+  -webkit-animation: animate-svg-fill-6 0.7s ease-out 4.3s both;
+  animation: animate-svg-fill-6 0.7s ease-out 4.3s both;
+}
+
+@-webkit-keyframes animate-svg-fill-7 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+@keyframes animate-svg-fill-7 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+.svg-elem-7 {
+  -webkit-animation: animate-svg-fill-7 0.7s ease-out 4.999999999999999s both;
+  animation: animate-svg-fill-7 0.7s ease-out 4.999999999999999s both;
+}
+
+@-webkit-keyframes animate-svg-fill-8 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+@keyframes animate-svg-fill-8 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+.svg-elem-8 {
+  -webkit-animation: animate-svg-fill-8 0.7s ease-out 5.699999999999999s both;
+  animation: animate-svg-fill-8 0.7s ease-out 5.699999999999999s both;
+}
+
+@-webkit-keyframes animate-svg-fill-9 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+@keyframes animate-svg-fill-9 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+.svg-elem-9 {
+  -webkit-animation: animate-svg-fill-9 0.7s ease-out 6.3999999999999995s both;
+  animation: animate-svg-fill-9 0.7s ease-out 6.3999999999999995s both;
+}
+
+@-webkit-keyframes animate-svg-fill-10 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+@keyframes animate-svg-fill-10 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+.svg-elem-10 {
+  -webkit-animation: animate-svg-fill-10 0.7s ease-out 7.1s both;
+  animation: animate-svg-fill-10 0.7s ease-out 7.1s both;
+}
+
+@-webkit-keyframes animate-svg-fill-11 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(232, 74, 95);
+  }
+}
+
+@keyframes animate-svg-fill-11 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(232, 74, 95);
+  }
+}
+
+.svg-elem-11 {
+  -webkit-animation: animate-svg-fill-11 0.7s ease-out 7.8s both;
+  animation: animate-svg-fill-11 0.7s ease-out 7.8s both;
+}
+
+@-webkit-keyframes animate-svg-fill-12 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+@keyframes animate-svg-fill-12 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+.svg-elem-12 {
+  -webkit-animation: animate-svg-fill-12 0.7s ease-out 8.5s both;
+  animation: animate-svg-fill-12 0.7s ease-out 8.5s both;
+}
+
+@-webkit-keyframes animate-svg-fill-13 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+@keyframes animate-svg-fill-13 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+.svg-elem-13 {
+  -webkit-animation: animate-svg-fill-13 0.7s ease-out 9.2s both;
+  animation: animate-svg-fill-13 0.7s ease-out 9.2s both;
+}
+
+@-webkit-keyframes animate-svg-fill-14 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(153, 184, 152);
+  }
+}
+
+@keyframes animate-svg-fill-14 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(153, 184, 152);
+  }
+}
+
+.svg-elem-14 {
+  -webkit-animation: animate-svg-fill-14 0.7s ease-out 9.9s both;
+  animation: animate-svg-fill-14 0.7s ease-out 9.9s both;
+}
+
+@-webkit-keyframes animate-svg-fill-15 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(245, 189, 51);
+  }
+}
+
+@keyframes animate-svg-fill-15 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(245, 189, 51);
+  }
+}
+
+.svg-elem-15 {
+  -webkit-animation: animate-svg-fill-15 0.7s ease-out 10.6s both;
+  animation: animate-svg-fill-15 0.7s ease-out 10.6s both;
+}
+
+@-webkit-keyframes animate-svg-fill-16 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+@keyframes animate-svg-fill-16 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(252, 252, 98);
+  }
+}
+
+.svg-elem-16 {
+  -webkit-animation: animate-svg-fill-16 0.7s ease-out 11.3s both;
+  animation: animate-svg-fill-16 0.7s ease-out 11.3s both;
+}
+
+@-webkit-keyframes animate-svg-fill-17 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(245, 189, 51);
+  }
+}
+
+@keyframes animate-svg-fill-17 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(245, 189, 51);
+  }
+}
+
+.svg-elem-17 {
+  -webkit-animation: animate-svg-fill-17 0.7s ease-out 12s both;
+  animation: animate-svg-fill-17 0.7s ease-out 12s both;
+}
+
+@-webkit-keyframes animate-svg-fill-18 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+@keyframes animate-svg-fill-18 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 137, 102);
+  }
+}
+
+.svg-elem-18 {
+  -webkit-animation: animate-svg-fill-18 0.7s ease-out 12.7s both;
+  animation: animate-svg-fill-18 0.7s ease-out 12.7s both;
+}
+
+@-webkit-keyframes animate-svg-fill-19 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(153, 184, 152);
+  }
+}
+
+@keyframes animate-svg-fill-19 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(153, 184, 152);
+  }
+}
+
+.svg-elem-19 {
+  -webkit-animation: animate-svg-fill-19 0.7s ease-out 13.4s both;
+  animation: animate-svg-fill-19 0.7s ease-out 13.4s both;
+}
+
+@-webkit-keyframes animate-svg-fill-20 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(153, 184, 152);
+  }
+}
+
+@keyframes animate-svg-fill-20 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(153, 184, 152);
+  }
+}
+
+.svg-elem-20 {
+  -webkit-animation: animate-svg-fill-20 0.7s ease-out 14.1s both;
+  animation: animate-svg-fill-20 0.7s ease-out 14.1s both;
+}
+
+@-webkit-keyframes animate-svg-fill-21 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 255, 255);
+  }
+}
+
+@keyframes animate-svg-fill-21 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 255, 255);
+  }
+}
+
+.svg-elem-21 {
+  -webkit-animation: animate-svg-fill-21 0.7s ease-out 14.8s both;
+  animation: animate-svg-fill-21 0.7s ease-out 14.8s both;
+}
+
+#nprogress .spinner {
+  display: none !important;
+}
+
+/* .toggleOpen.active *:not(.innerToggle){
+   display: none;
+} */
+
+.toggleOpen.active:not(.rightSpacing):before {
+  z-index: 4;
+}
+
+.overLay {
+  overflow: hidden;
+  position: relative;
+}
+
+.overLay::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.rounded-r-lg {
+  border-radius: 0 12px 12px 0;
+}
+
+.marqueeText {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.marqueeTextInner {
+  flex: 0 0 auto;
+  animation: scroll 20s linear infinite;
+  animation-play-state: running;
+  animation-delay: 2s;
+  animation-direction: normal;
+}
+
+.marqueeText:hover ul {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+p > strong {
+  font-weight: 600;
+}
+
+p > strong > span {
+  font-weight: 600;
+}
+
+.scroll-to-top {
+    background-color: #E84A5F !important;
+    width: 40px !important;
+    height: 40px !important;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll-to-top svg{
+  fill: white !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.overlayImage {
+    animation: fadeIn .4s ease forwards;
+    opacity: 0;
+}
+
+/* ScrollToTopButton.css */
+
+.border-draw circle {
+  stroke-dasharray: 63; 
+  stroke-dashoffset: 63; 
+  animation: drawBorder 0.5s ease-in-out forwards; 
+}
+
+@keyframes drawBorder {
+  from {
+    stroke-dashoffset: 63; 
+  }
+  to {
+    stroke-dashoffset: 0; 
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+  }
+}
+
+.sparkle-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.sparkle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: sparkle 0.8s ease-out infinite;
+}
+
+.dots-menu {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff5f56;
+}
+
+.yellow {
+  background-color: #ffc130;
+}
+
+.green {
+  background-color: #32b643;
+}
+
+
+.codeBlock span{
+  font-style: normal !important;
+  font-weight: 300 !important;
+  padding-left: 0 !important;
+}
+
+/* changes */
+
+.toggleOpen:before{
+  content: "";
+  background-color: #FCFC62;
+  width: 0;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  transition: width 0.2s ease-in-out;
+}
+.toggleOpen:not(.rightSpacing):before{
+   z-index: 998 !important;
+}
+.toggleOpen.active:before{
+ width: 100vw;
+ height: 200vh;
+}
+
+.toggleOpen.active:not(.rightSpacing) .innerToggle{
+  z-index: 999 !important;
+}
+
