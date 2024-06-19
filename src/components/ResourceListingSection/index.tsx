@@ -71,11 +71,11 @@ const ResourceListingSection: React.FC<ResourceListingSectionType> = (
                   src={image}
                   className="object-cover"
                   layout="responsive"
-                  width={512} // Base width
-                  height={512} // Base height
+                  width={512} 
+                  height={512} 
                   sizes="(max-width: 767px) 196px, (min-width: 768px) 50vw"
                   loading="lazy"
-                  priority={slug?.current ? false : true} // Preload critical images
+                  priority={slug?.current ? false : true} 
                 />
               </Link>
             )}
